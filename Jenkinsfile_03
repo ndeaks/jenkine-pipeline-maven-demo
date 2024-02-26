@@ -6,7 +6,7 @@ pipeline {
     }
     agent {
         dockerfile {
-            label "docker"
+            label "Docker-Slave"
             args "-v /tmp/maven:/home/jenkins/.m2 -e MAVEN_CONFIG=/home/jenkins/.m2"
         }
     }
@@ -21,9 +21,9 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            cleanWs()
-        }
-    }
+//    post {
+//        always {
+//            cleanWs()
+//        }
+//    }
 }
