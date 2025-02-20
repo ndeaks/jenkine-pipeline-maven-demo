@@ -1,5 +1,19 @@
 #!groovy
 
+properties(
+    [
+        parameters([
+                string(defaultValue: 'https://github.mn.nsandi.com/NSI/hdw_talend_tlrret_tac8.0.1', name: 'repoUrl'),
+                string(defaultValue: 'demo_update', name: 'branchName'),
+                string(defaultValue: 'HDW_TALEND_TLRRET', name: 'projectDir'),
+                string(defaultValue: '8.0.14', name: 'mavenPlugin'),
+                string(defaultValue: 'R2024-03', name: 'updateVersion')
+        ])   
+    ]
+) 
+
+
+
 pipeline {
     agent any
 
